@@ -26,7 +26,7 @@ def dislogout(data_dislogout, number):
 
 def common():
     os.system("cls")
-    print(f"{'SISTEM OPERATOR WARNET NAZI':^50}")
+    print(f"{'SISTEM OPERATOR WARNET Kampung Baru':^50}")
     print("-"*50)
     print(f"{'Kursi':9} {'Status':11} {'Username':20s}")
     print("-"*50)
