@@ -54,6 +54,40 @@ def pembayaran(p):
             elif pembayaran<13000:
                 print("Pembayaran Invalid!!")
 
+def pembayaranMember(p):
+    while True:
+        pembayaran=eval(input("Masukan nominal pembayaran :"))
+        if p==1:
+            if pembayaran==4000:
+                print("Pembayaran berhasil")
+                break
+            elif pembayaran>4000:
+                print("Pembayaran berhasil")
+                print("Kembalian anda : ",pembayaran-4000)
+                break
+            elif pembayaran<4000:
+                print("Pembayaran Invalid")
+        elif p==2:
+            if pembayaran==7000:
+                print("Pembayaran berhasil")
+                break
+            elif pembayaran>7000:
+                print("Pembayaran berhasil")
+                print("Kembalian anda : ",pembayaran-7000)
+                break
+            elif pembayaran<7000:
+                print("Pembayaran Invalid")
+        elif p==3:
+            if pembayaran==10000:
+                print("Pembayaran berhasil")
+                break
+            elif pembayaran>10000:
+                print("Pembayaran berhasil")
+                print("Kembalian anda : ",pembayaran-10000)
+                break
+            elif pembayaran<10000:
+                print("Pembayaran Invalid!!")
+
 def indexMember(id,ps):
     for i in range (1,4):
         if id==data.id[i] and ps==data.ps[i]:
@@ -70,8 +104,6 @@ def login(w):
     while True:
         id=input("id :")
         ps=input("password :")
-        getId=id
-        getPs=ps
         memberIndex=indexMember(id,ps) 
         if memberIndex==0:
             print("Login gagal! id atau password salah!")
