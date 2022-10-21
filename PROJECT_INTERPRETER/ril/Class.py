@@ -1,6 +1,15 @@
 from operator import truediv
 from threading import get_ident
 import dc_data_member as data
+import time
+
+
+def struct(jam):
+    a=time.localtime()
+    hr=a.tm_hour + jam
+    mn=a.tm_min
+    sc=a.tm_sec
+    return ('{}:{}:{}'.format(hr,mn,sc))
 
 def welcome(s,x,w):
     print('┏' + ('━' * w)                       + '┓')
@@ -22,7 +31,13 @@ def menu(c,s,w):
 
 def pembayaran(p):
     while True:
-        pembayaran=eval(input("Masukan nominal pembayaran :"))
+        while True:
+                try:
+                    pembayaran=eval(input("Masukan nominal pembayaran :"))
+                except (SyntaxError,NameError):
+                    print("pilihan invalid")
+                    continue
+                break
         if p==1:
             if pembayaran==5000:
                 print("Pembayaran berhasil")
@@ -56,7 +71,13 @@ def pembayaran(p):
 
 def pembayaranMember(p):
     while True:
-        pembayaran=eval(input("Masukan nominal pembayaran :"))
+        while True:
+                try:
+                    pembayaran=eval(input("Masukan nominal pembayaran :"))
+                except (SyntaxError,NameError):
+                    print("pilihan invalid")
+                    continue
+                break
         if p==1:
             if pembayaran==4000:
                 print("Pembayaran berhasil")
