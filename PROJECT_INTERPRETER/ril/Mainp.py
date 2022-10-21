@@ -26,11 +26,26 @@ class Warnet :
                 v.pembayaran(pilihan)
         elif number == 2:
             v.login(60)
+            v.menu(" SILAKAN PILIH MENU ", jls_extract_var, 60)
+            print("1 jam = 4000          2 jam = 7000         3 jam = 10000")
+            p=eval(input("\nPilihan paket :"))
+            if p==1:
+                v.pembayaranMember(p)
+            elif p==2:
+                v.pembayaranMember(p)
+            elif p==3:
+                v.pembayaranMember(p)
+
         elif number == 3:
             v.exit(60)
             break;
-        exit=eval(input("\nKlik 1 untuk melanjutkan :"))
-        if exit!=1:
-            v.exit(60)
+        while True:
+            try :
+                exit=eval(input("\nKlik 1 untuk melanjutkan :"))        
+            except (NameError, SyntaxError):
+                print ("yang anda masukkan bukan angka")
+                continue
             break
-    
+    v.exit(60)
+            
+Warnet()
