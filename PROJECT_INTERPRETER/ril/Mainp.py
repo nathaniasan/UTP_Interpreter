@@ -1,6 +1,7 @@
 import os
 from re import T
 from tkinter import BROWSE
+import time
 
 import Class as v
 
@@ -31,12 +32,19 @@ class Warnet :
                     print("pilihan invalid")
                     continue
                 break
+            
             if pilihan==1:
                 v.pembayaran(pilihan)
+                print ('Waktu penggunaan berakhir pada pukul ', v.struct(pilihan))
+                
             elif pilihan==2:
                 v.pembayaran(pilihan)
+                print ('Waktu penggunaan berakhir pada pukul ', v.struct(pilihan))
+
             elif pilihan==3:
                 v.pembayaran(pilihan)
+                print ('Waktu penggunaan berakhir pada pukul ', v.struct(pilihan))
+
             else:
                 print("\nPilihan invalid......!\n")
                 continue
@@ -61,10 +69,13 @@ class Warnet :
                     break
                 if p==1:
                     v.pembayaranMember(p)
+                    print ('Waktu penggunaan berakhir pada pukul ', v.struct(pilihan))
                 elif p==2:
                     v.pembayaranMember(p)
+                    print ('Waktu penggunaan berakhir pada pukul ', v.struct(pilihan))
                 elif p==3:
                     v.pembayaranMember(p)
+                    print ('Waktu penggunaan berakhir pada pukul ', v.struct(pilihan))
                 else:
                     print("\nPilihan invalid......!\n")
                     continue
