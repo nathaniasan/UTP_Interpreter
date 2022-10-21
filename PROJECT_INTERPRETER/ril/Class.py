@@ -1,5 +1,3 @@
-from operator import truediv
-from threading import get_ident
 import dc_data_member as data
 import time
 
