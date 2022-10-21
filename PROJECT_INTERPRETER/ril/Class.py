@@ -1,3 +1,7 @@
+from operator import truediv
+from threading import get_ident
+import dc_data_member as data
+
 def welcome(s,x,w):
     print('┏' + ('━' * w)                       + '┓')
     print('┃' + ' {} '.format(s).center(w, '░') + '┃')
@@ -16,51 +20,72 @@ def menu(c,s,w):
 
     print('┡' + ('━' * w)                       + '┩')
 
-def kategori():
-    
-    print('┏' + ('━' * w)                       + '┓')
-    print 
-    print('┏' + (' ' * w)                       + '┓')
-
 def pembayaran(p):
     while True:
         pembayaran=eval(input("Masukan nominal pembayaran :"))
         if p==1:
             if pembayaran==5000:
+                print("Pembayaran berhasil")
                 break
             elif pembayaran>5000:
+                print("Pembayaran berhasil")
                 print("Kembalian anda : ",pembayaran-5000)
                 break
             elif pembayaran<5000:
                 print("Pembayaran Invalid")
         elif p==2:
             if pembayaran==9000:
+                print("Pembayaran berhasil")
                 break
             elif pembayaran>9000:
+                print("Pembayaran berhasil")
                 print("Kembalian anda : ",pembayaran-9000)
                 break
             elif pembayaran<9000:
                 print("Pembayaran Invalid")
         elif p==3:
             if pembayaran==13000:
+                print("Pembayaran berhasil")
                 break
             elif pembayaran>13000:
+                print("Pembayaran berhasil")
                 print("Kembalian anda : ",pembayaran-13000)
                 break
             elif pembayaran<13000:
                 print("Pembayaran Invalid!!")
 
-    
-def headerlogin(w):
+def indexMember(id,ps):
+    for i in range (1,4):
+        if id==data.id[i] and ps==data.ps[i]:
+            return i
+    return 0
+
+def login(w):
+
     print('┏' + ('━' * w)                       + '┓')
     print('┃' + ' {} '.format("Login Member Warnet PI").center(w, '░') + '┃')
-    print('┃' + ' {} '.format("silahkan masukan id password dengan benar").center(w, '░') +'┃')
+    print('┃' + ' {} '.format("silahkan masukan id password dengan benar").center(w, '░') + '┃')
+    print('┡' + ('━' * w)                       + '┩')
+ 
+    while True:
+        id=input("id :")
+        ps=input("password :")
+        getId=id
+        getPs=ps
+        memberIndex=indexMember(id,ps) 
+        if memberIndex==0:
+            print("Login gagal! id atau password salah!")
+        else:
+            print("Login berhasil..................!")
+            break
+
+    print('┏' + ('━' * w)                       + '┓')
+    print('┃' + ' {} '.format("Selamat datang ").center(w, '░') + '┃')
+    print('┃' + ' {} '.format(data.nama[memberIndex]).center(w, '░') + '┃')
+    print('┃' + ' {} '.format(data.jenis[memberIndex]).center(w, '░') + '┃')
     print('┡' + ('━' * w)                       + '┩')
 
-def member ():
-    while True :
-        try : 
-            y = input ('nama anda adalah : ')
-        except TypeError(y):
-            print('silakan login ulang, daya yang anda masukkan salah')
-            welcome(s, x, w)
+def exit(w):
+    print('┏' + ('━' * w)                       + '┓')
+    print('┃' + ' {} '.format("Terima kasih ").center(w, '░') + '┃')
+    print('┡' + ('━' * w)                       + '┩')
