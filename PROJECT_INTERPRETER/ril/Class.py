@@ -35,39 +35,39 @@ def pembayaran(p):
                 try:
                     pembayaran=eval(input("Masukan nominal pembayaran :"))
                 except (SyntaxError,NameError):
-                    print("pilihan invalid")
+                    print("pilihan invalid\n")
                     continue
                 break
         if p==1:
             if pembayaran==5000:
-                print("Pembayaran berhasil")
+                print("\nPembayaran berhasil")
                 break
             elif pembayaran>5000:
-                print("Pembayaran berhasil")
+                print("\nPembayaran berhasil")
                 print("Kembalian anda : ",pembayaran-5000)
                 break
             elif pembayaran<5000:
-                print("Pembayaran Invalid")
+                print("Pembayaran Invalid\n")
         elif p==2:
             if pembayaran==9000:
-                print("Pembayaran berhasil")
+                print("\nPembayaran berhasil")
                 break
             elif pembayaran>9000:
-                print("Pembayaran berhasil")
+                print("\nPembayaran berhasil")
                 print("Kembalian anda : ",pembayaran-9000)
                 break
             elif pembayaran<9000:
-                print("Pembayaran Invalid")
+                print("Pembayaran Invalid\n")
         elif p==3:
             if pembayaran==13000:
-                print("Pembayaran berhasil")
+                print("\nPembayaran berhasil")
                 break
             elif pembayaran>13000:
-                print("Pembayaran berhasil")
+                print("\nPembayaran berhasil")
                 print("Kembalian anda : ",pembayaran-13000)
                 break
             elif pembayaran<13000:
-                print("Pembayaran Invalid!!")
+                print("Pembayaran Invalid!!\n")
 
 def pembayaranMember(p):
     while True:
@@ -75,39 +75,39 @@ def pembayaranMember(p):
                 try:
                     pembayaran=eval(input("Masukan nominal pembayaran :"))
                 except (SyntaxError,NameError):
-                    print("pilihan invalid")
+                    print("pilihan invalid\n")
                     continue
                 break
         if p==1:
             if pembayaran==4000:
-                print("Pembayaran berhasil")
+                print("\nPembayaran berhasil")
                 break
             elif pembayaran>4000:
-                print("Pembayaran berhasil")
+                print("\nPembayaran berhasil")
                 print("Kembalian anda : ",pembayaran-4000)
                 break
             elif pembayaran<4000:
-                print("Pembayaran Invalid")
+                print("Pembayaran Invalid\n")
         elif p==2:
             if pembayaran==7000:
-                print("Pembayaran berhasil")
+                print("\nPembayaran berhasil")
                 break
             elif pembayaran>7000:
-                print("Pembayaran berhasil")
+                print("\nPembayaran berhasil")
                 print("Kembalian anda : ",pembayaran-7000)
                 break
             elif pembayaran<7000:
-                print("Pembayaran Invalid")
+                print("Pembayaran Invalid\n")
         elif p==3:
             if pembayaran==10000:
-                print("Pembayaran berhasil")
+                print("\nPembayaran berhasil")
                 break
             elif pembayaran>10000:
-                print("Pembayaran berhasil")
+                print("\nPembayaran berhasil")
                 print("Kembalian anda : ",pembayaran-10000)
                 break
             elif pembayaran<10000:
-                print("Pembayaran Invalid!!")
+                print("Pembayaran Invalid!!\n")
 
 def indexMember(id,ps):
     for i in range (1,4):
