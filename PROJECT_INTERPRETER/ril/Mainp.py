@@ -1,7 +1,7 @@
 import Class as v
 
 menu = ["[1] Paket Normal"," [2] Login"," [3] exit"]
-menu1 = ["[1] Paket untuk Member"," [2] Login"," [3] exit"]
+menu1 = ["[1] Paket untuk Member"," [2] exit"]
 
 class Warnet : 
     jls_extract_var = menu
